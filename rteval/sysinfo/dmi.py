@@ -39,6 +39,8 @@ except:
     pass
 
 def ProcessWarnings():
+    if not dmidecode_loaded:
+        return
 
     if not hasattr(dmidecode, 'get_warnings'):
         return
